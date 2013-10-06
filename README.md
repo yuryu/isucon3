@@ -1,6 +1,7 @@
 # やること
 
 /etc/yum.repos.d/epel.repo で enable=1 にする
+
 sudo yum install rabbitmq-server librabbitmq-devel librabbitmq
 
 ### ベンチマークの設定と実行
