@@ -234,14 +234,24 @@ get '/mypage' => [qw(session get_user require_user)] => sub {
 post '/memo' => [qw(session get_user require_user anti_csrf)] => sub {
     my ($self, $c) = @_;
 
-    $self->dbh->query(
-        'INSERT INTO memos (user, content, is_private, created_at) VALUES (?, ?, ?, now())',
-        $c->stash->{user}->{id},
-        scalar $c->req->param('content'),
-        scalar($c->req->param('is_private')) ? 1 : 0,
-    );
-    my $memo_id = $self->dbh->last_insert_id;
-    $c->redirect('/memo/' . $memo_id);
+    my $last_insert_id_key = 'memos_last_insert_id';
+
+    my $last_id = $self->memcached->get($last_insert_id_key);
+    if ($last_id) {
+        $last_id = $self->dbh->select_one('SELECT id FROM memos ORDER BY id DESC LIMIT 1');
+        $self->memcached->set($last_insert_id_key, $last_id);
+    }
+
+    $last_id = $self->memcached->incr($last_insert_id_key);
+
+    my $content = scalar $c->req->param('content');
+    my $content_html = markdown($content);
+
+    $self->memcached->set("markdown_:$last_id", $content_html);
+
+    # add queue here
+
+    $c->redirect('/memo/' . $last_id);
 };
 
 get '/memo/:id' => [qw(session get_user)] => sub {
