@@ -12,6 +12,7 @@ use File::Temp qw/ tempfile /;
 use IO::Handle;
 use Encode;
 use Time::Piece;
+use Cache::Memcached::Fast;
 
 sub load_config {
     my $self = shift;
@@ -48,6 +49,15 @@ sub dbh {
             },
         );
     };
+}
+
+sub memcached {
+    my ($self) = @_;
+    $self->{_memcache} ||= do {
+        Cache::Memcached::Fast->new({
+            servers => [ "localhost:11211" ],
+        });
+    }
 }
 
 filter 'session' => sub {
