@@ -5,7 +5,6 @@ use warnings;
 use utf8;
 use Kossy;
 use DBIx::Sunny;
-use JSON qw/ decode_json /;
 use Digest::SHA qw/ sha256_hex /;
 use DBIx::Sunny;
 use File::Temp qw/ tempfile /;
@@ -15,23 +14,11 @@ use Time::Piece;
 use Cache::Memcached::Fast;
 use Isucon3::Util;
 
-sub load_config {
-    my $self = shift;
-    $self->{_config} ||= do {
-        my $env = $ENV{ISUCON_ENV} || 'local';
-        open(my $fh, '<', $self->root_dir . "/../config/${env}.json") or die $!;
-        my $json = do { local $/; <$fh> };
-        close($fh);
-        decode_json($json);
-    };
-}
-
 sub dbh {
     my ($self) = @_;
     $self->{_dbh} ||= do {
-        my $dbconf = $self->load_config->{database};
         DBIx::Sunny->connect(
-            "dbi:mysql:database=${$dbconf}{dbname};host=${$dbconf}{host};port=${$dbconf}{port}", $dbconf->{username}, $dbconf->{password}, {
+            "dbi:mysql:database=isucon;host=localhost;port=3306", 'isucon', '', {
                 RaiseError => 1,
                 PrintError => 0,
                 AutoInactiveDestroy => 1,
