@@ -11,6 +11,7 @@ use HTML::FillInForm::Lite;
 use Carp;
 use File::Temp qw/ tempfile /;
 use Data::Dumper;
+use Isucon3::Markdown;
 
 has memcached => (
     is => 'ro',
@@ -30,24 +31,9 @@ sub markdown {
     my $html = $memd->get("markdown_" . $id);
     return $html if $html;
 
-    my ($fh, $filename) = tempfile();
-    $fh->print(encode_utf8($content));
-    $fh->close;
-    $html = qx{ ../bin/markdown $filename };
-    unlink $filename;
+    $html = Isucon3::Markdown::Markdown(encode_utf8($content));
     $memd->set("markdown_" . $id, $html);
     return $html;
-
-    my ($fin, $fout);
-    my $pid = open2($fin, $fout, "../bin/markdown") or croak;
-    print $fout, $content;
-    close($fout);
-    waitpid($pid, 0);
-    local $/;
-    $html = <$fin>;
-    close($fin);
-
-    
 }
 
 no Mouse;

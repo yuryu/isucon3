@@ -26,16 +26,6 @@ sub load_config {
     };
 }
 
-sub markdown {
-    my $content = shift;
-    my ($fh, $filename) = tempfile();
-    $fh->print(encode_utf8($content));
-    $fh->close;
-    my $html = qx{ ../bin/markdown $filename };
-    unlink $filename;
-    return $html;
-}
-
 sub dbh {
     my ($self) = @_;
     $self->{_dbh} ||= do {
