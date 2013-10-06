@@ -15,6 +15,9 @@ use Time::Piece;
 use Cache::Memcached::Fast;
 use Net::RabbitFoot;
 use Coro;
+use Text::Xslate;
+
+use Isucon3::Util;
 
 has queue => (
     is => "ro",
@@ -82,15 +85,12 @@ has json => (
     lazy => 1,
 );
 
-sub dequeue
-{
-    my ($self) = @_;
-
-    my $m = $self->mq->get(1, $self->queue);
-    return undef unless defined $m;
-}
-
-
+has tx => (
+    is => 'ro',
+    isa => 'Text::Xslate',
+    default => sub { Text::Xslate->new(); },
+    lazy => 1,
+);
 
 sub run
 {

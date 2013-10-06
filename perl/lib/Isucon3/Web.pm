@@ -13,6 +13,7 @@ use IO::Handle;
 use Encode;
 use Time::Piece;
 use Cache::Memcached::Fast;
+use Isucon3::Util;
 
 sub load_config {
     my $self = shift;
@@ -250,7 +251,8 @@ get '/memo/:id' => [qw(session get_user)] => sub {
             $c->halt(404);
         }
     }
-    $memo->{content_html} = markdown($memo->{content});
+    my $util = Isucon3::Util->new;
+    $memo->{content_html} = $util->markdown($c->args->{id}, $memo->{content});
     $memo->{username} = $self->dbh->select_one(
         'SELECT username FROM users WHERE id=?',
         $memo->{user},
