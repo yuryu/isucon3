@@ -228,7 +228,8 @@ get '/memo/:id' => [qw(session get_user)] => sub {
             $c->halt(404);
         }
     }
-    my $util = Isucon3::Util->new;
+
+    my $util = Isucon3::Util->new();
     $memo->{content_html} = $util->markdown($c->args->{id}, $memo->{content});
     $memo->{username} = $self->dbh->select_one(
         'SELECT username FROM users WHERE id=?',
