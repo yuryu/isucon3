@@ -1,3 +1,9 @@
+# やること
+
+/etc/yum.repos.d/epel.repo で enable=1 にする
+
+sudo yum install rabbitmq-server librabbitmq-devel librabbitmq
+
 ### ベンチマークの設定と実行
 
 1. インスタンス起動時には、チームを識別するための API key の初期設定が必要です。API key は[管理画面](https://isucon2013.kayac.com/) にチーム代表者が参加登録したアカウントでログインしたトップページに表示されていますので、下記コマンドを実行してください
