@@ -120,12 +120,7 @@ get '/' => [qw(session get_user)] => sub {
     my $memos = $self->dbh->select_all(
         'SELECT * FROM memos WHERE is_private=0 ORDER BY created_at DESC, id DESC LIMIT 100',
     );
-    for my $memo (@$memos) {
-        $memo->{username} = $self->dbh->select_one(
-            'SELECT username FROM users WHERE id=?',
-            $memo->{user},
-        );
-    }
+
     $c->render('index.tx', {
         memos => $memos,
         page  => 0,
@@ -146,12 +141,6 @@ get '/recent/:page' => [qw(session get_user)] => sub {
         return $c->halt(404);
     }
 
-    for my $memo (@$memos) {
-        $memo->{username} = $self->dbh->select_one(
-            'SELECT username FROM users WHERE id=?',
-            $memo->{user},
-        );
-    }
     $c->render('index.tx', {
         memos => $memos,
         page  => $page,
@@ -235,8 +224,9 @@ post '/memo' => [qw(session get_user require_user anti_csrf)] => sub {
     my ($self, $c) = @_;
 
     $self->dbh->query(
-        'INSERT INTO memos (user, content, is_private, created_at) VALUES (?, ?, ?, now())',
+        'INSERT INTO memos (user, username, content, is_private, created_at) VALUES (?, ?, ?, ?, now())',
         $c->stash->{user}->{id},
+        $c->stash->{user}->{username},
         scalar $c->req->param('content'),
         scalar($c->req->param('is_private')) ? 1 : 0,
     );
