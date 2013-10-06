@@ -1,0 +1,15 @@
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Common.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Frame.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Frame/Body.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Frame/Header.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Frame/Heartbeat.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Frame/Method.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Frame/OOBBody.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Frame/OOBHeader.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Frame/OOBMethod.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Frame/Trace.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Protocol.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Protocol/Base.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Protocol/v0_8.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/AMQP/Value.pm

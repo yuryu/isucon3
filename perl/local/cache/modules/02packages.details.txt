@@ -4,8 +4,8 @@ Description:  Package names found in cpanfile.snapshot
 Columns:      package name, version, path
 Intended-For: Automated fetch routines, namespace documentation.
 Written-By:   Carton v1.0.12
-Line-Count:   477
-Last-Updated: Sun Oct  6 12:35:21 2013
+Line-Count:   478
+Last-Updated: Sun Oct  6 14:10:22 2013
 
 Apache::LogFormat::Compiler            0.13  K/KA/KAZEBURO/Apache-LogFormat-Compiler-0.13.tar.gz
 Bundle::DBD::mysql                    4.004  C/CA/CAPTTOFU/DBD-mysql-4.024.tar.gz
@@ -222,6 +222,7 @@ Mouse::Util                           undef  G/GF/GFUJI/Mouse-1.12.tar.gz
 Mouse::Util::MetaRole                  1.12  G/GF/GFUJI/Mouse-1.12.tar.gz
 Mouse::Util::TypeConstraints          undef  G/GF/GFUJI/Mouse-1.12.tar.gz
 Net::EmptyPort                        undef  T/TO/TOKUHIROM/Test-TCP-2.01.tar.gz
+Net::RabbitMQ                      0.002006  J/JE/JESUS/Net--RabbitMQ-0.2.6.tar.gz
 Net::Server                           2.007  R/RH/RHANDOM/Net-Server-2.007.tar.gz
 Net::Server::Daemonize                 0.06  R/RH/RHANDOM/Net-Server-2.007.tar.gz
 Net::Server::Fork                     undef  R/RH/RHANDOM/Net-Server-2.007.tar.gz

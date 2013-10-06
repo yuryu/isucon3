@@ -1,0 +1,14 @@
+/home/isucon/webapp/perl/local/bin/rabbit_foot
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot/Channel.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot/Cmd.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot/Cmd/Command/bind_queue.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot/Cmd/Command/declare_exchange.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot/Cmd/Command/declare_queue.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot/Cmd/Command/delete_exchange.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot/Cmd/Command/delete_queue.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot/Cmd/Command/purge_queue.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot/Cmd/Command/unbind_queue.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot/Cmd/Role/Command.pm
+/home/isucon/webapp/perl/local/lib/perl5/Net/RabbitFoot/Cmd/Role/Config.pm
+/home/isucon/webapp/perl/local/lib/perl5/auto/share/dist/Net-RabbitFoot/fixed_amqp0-8.xml

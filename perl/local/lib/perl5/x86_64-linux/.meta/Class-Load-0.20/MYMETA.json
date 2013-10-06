@@ -1,0 +1,69 @@
+{
+   "abstract" : "a working (require \"Class::Name\") and more",
+   "author" : [
+      "Shawn M Moore <sartak at bestpractical.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.300016, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Class-Load",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::Fatal" : "0",
+            "Test::More" : "0.88",
+            "Test::Requires" : "0",
+            "constant" : "0",
+            "version" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0",
+            "Data::OptList" : "0",
+            "Exporter" : "0",
+            "Module::Implementation" : "0.04",
+            "Module::Runtime" : "0.012",
+            "Package::Stash" : "0.14",
+            "Scalar::Util" : "0",
+            "Try::Tiny" : "0",
+            "base" : "0",
+            "strict" : "0",
+            "warnings" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::Fatal" : "0",
+            "Test::More" : "0.88",
+            "Test::Requires" : "0",
+            "constant" : "0",
+            "version" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "mailto" : "bug-class-load@rt.cpan.org",
+         "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=Class-Load"
+      },
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/autarch/class-load.git",
+         "web" : "https://github.com/autarch/class-load"
+      }
+   },
+   "version" : "0.20"
+}

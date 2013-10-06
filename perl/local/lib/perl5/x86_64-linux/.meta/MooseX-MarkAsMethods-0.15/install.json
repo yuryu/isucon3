@@ -1,0 +1,1 @@
+{"version":"0.15","target":"MooseX::MarkAsMethods","provides":{"MooseX::MarkAsMethods::MetaRole::MethodMarker":{"file":"lib/MooseX/MarkAsMethods.pm","version":"0.15"},"MooseX::MarkAsMethods":{"file":"lib/MooseX/MarkAsMethods.pm","version":"0.15"}},"pathname":"R/RS/RSRCHBOY/MooseX-MarkAsMethods-0.15.tar.gz","name":"MooseX::MarkAsMethods","dist":"MooseX-MarkAsMethods-0.15"}

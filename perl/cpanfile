@@ -10,4 +10,5 @@ requires "Starman";
 requires "Plack::Session";
 requires "Cache::Memcached::Fast";
 
-requires "Net::RabbitMQ";
+requires "Net::RabbitFoot";
+

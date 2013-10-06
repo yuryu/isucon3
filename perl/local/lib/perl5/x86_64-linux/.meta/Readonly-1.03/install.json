@@ -1,0 +1,1 @@
+{"version":"1.03","target":"Readonly","name":"Readonly","pathname":"R/RO/ROODE/Readonly-1.03.tar.gz","dist":"Readonly-1.03","provides":{"Readonly::Array":{"version":"1.03","file":"Readonly.pm"},"Readonly":{"version":"1.03","file":"Readonly.pm"},"Readonly::Hash":{"version":"1.03","file":"Readonly.pm"},"Readonly::Scalar":{"file":"Readonly.pm","version":"1.03"}}}

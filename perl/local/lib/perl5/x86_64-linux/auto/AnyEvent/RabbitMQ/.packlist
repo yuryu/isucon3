@@ -1,0 +1,6 @@
+/home/isucon/webapp/perl/local/lib/perl5/AnyEvent/RabbitMQ.pm
+/home/isucon/webapp/perl/local/lib/perl5/AnyEvent/RabbitMQ/Channel.pm
+/home/isucon/webapp/perl/local/lib/perl5/AnyEvent/RabbitMQ/LocalQueue.pm
+/home/isucon/webapp/perl/local/lib/perl5/auto/share/dist/AnyEvent-RabbitMQ/README
+/home/isucon/webapp/perl/local/lib/perl5/auto/share/dist/AnyEvent-RabbitMQ/fixed_amqp0-8.xml
+/home/isucon/webapp/perl/local/lib/perl5/auto/share/dist/AnyEvent-RabbitMQ/fixed_amqp0-9-1.xml

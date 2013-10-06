@@ -1,0 +1,58 @@
+{
+   "abstract" : "Most commonly needed test functions and features.",
+   "author" : [
+      "Curtis \"Ovid\" Poe <ovid@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Build version 0.4007, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Test-Most",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.4"
+         }
+      },
+      "runtime" : {
+         "recommends" : {
+            "Data::Dumper::Names" : "0.03"
+         },
+         "requires" : {
+            "Exception::Class" : "1.14",
+            "Test::Deep" : "0.106",
+            "Test::Differences" : "0.61",
+            "Test::Exception" : "0.31",
+            "Test::Harness" : "3.21",
+            "Test::More" : "0.88",
+            "Test::Warn" : "0.23",
+            "perl" : "5.006"
+         }
+      }
+   },
+   "provides" : {
+      "Test::Most" : {
+         "file" : "lib/Test/Most.pm",
+         "version" : "0.31"
+      },
+      "Test::Most::Exception" : {
+         "file" : "lib/Test/Most/Exception.pm",
+         "version" : "0.31"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ],
+      "repository" : {
+         "url" : "http://github.com/Ovid/test--most"
+      }
+   },
+   "version" : "0.31"
+}
