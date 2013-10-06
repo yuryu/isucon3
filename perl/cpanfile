@@ -13,3 +13,5 @@ requires "Cache::Memcached::Fast";
 requires "Net::RabbitMQ";
 requires "Net::RabbitFoot";
 
+requires "Task::Plack";
+

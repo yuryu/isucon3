@@ -1,0 +1,5 @@
+/home/isucon/webapp/perl/local/bin/corona
+/home/isucon/webapp/perl/local/lib/perl5/Corona.pm
+/home/isucon/webapp/perl/local/lib/perl5/Corona/Server.pm
+/home/isucon/webapp/perl/local/lib/perl5/Plack/Handler/Corona.pm
+/home/isucon/webapp/perl/local/lib/perl5/Plack/Server/Coro.pm

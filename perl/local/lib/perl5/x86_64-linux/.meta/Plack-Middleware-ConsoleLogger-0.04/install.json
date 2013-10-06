@@ -1,0 +1,1 @@
+{"name":"Plack::Middleware::ConsoleLogger","version":"0.04","provides":{"Plack::Middleware::ConsoleLogger":{"version":"0.04","file":"lib/Plack/Middleware/ConsoleLogger.pm"}},"dist":"Plack-Middleware-ConsoleLogger-0.04","pathname":"M/MI/MIYAGAWA/Plack-Middleware-ConsoleLogger-0.04.tar.gz","target":"Plack::Middleware::ConsoleLogger"}
