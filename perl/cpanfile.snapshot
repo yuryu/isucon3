@@ -636,6 +636,12 @@ DISTRIBUTIONS
       Test::More 0.88
       XSLoader 0.02
       perl 5.006002
+  Net--RabbitMQ-0.2.6
+    pathname: J/JE/JESUS/Net--RabbitMQ-0.2.6.tar.gz
+    provides:
+      Net::RabbitMQ 0.002006
+    requirements:
+      ExtUtils::MakeMaker 0
   Net-Server-2.007
     pathname: R/RH/RHANDOM/Net-Server-2.007.tar.gz
     provides:

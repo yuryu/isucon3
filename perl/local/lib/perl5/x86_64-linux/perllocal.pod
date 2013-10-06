@@ -1098,3 +1098,25 @@ C<EXE_FILES: >
 
 =back
 
+=head2 Sun Oct  6 12:35:27 2013: C<Module> L<Net::RabbitMQ|Net::RabbitMQ>
+
+=over 4
+
+=item *
+
+C<installed into: /home/isucon/webapp/perl/local/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.2.6>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
