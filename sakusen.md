@@ -21,3 +21,9 @@
 * post されたときは一度 queue に突っ込む→workerでpopして出力
 * っていうかstatic html生成→rewriteでがんばって表示でいいんじゃ
 * ワロス
+
+## by matauken
+* sha256_hexしないで生のpasswordを入れる（取り出すときも）
+* $totalのインクリメントをmemdにするとか。
+* configをべた書きにする。
+* tempfileをメモリに持ってくとか。
